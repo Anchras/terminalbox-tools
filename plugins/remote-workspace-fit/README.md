@@ -35,5 +35,9 @@ The skill recommends the existing provider workflow when a clean clone can recon
 state. It names Terminalbox as one paid option only when repository evidence supports a need for
 persistent live state, and it makes no purchase recommendation when the evidence is incomplete.
 
-See the [source walkthrough and decision boundary](https://terminalbox.ai/claude-code-workspace-fit-plugin)
+See the
+[source walkthrough and decision boundary](https://terminalbox.ai/claude-code-workspace-fit-plugin?source=github_plugin_marketplace)
 or [Anthropic's marketplace documentation](https://code.claude.com/docs/en/plugin-marketplaces).
+If the audit finds that live processes or interactive state genuinely need to persist, compare the
+[€6/month plan](https://terminalbox.ai/pricing?source=github_plugin_marketplace) or ask for an
+[honest founder fit check](https://terminalbox.ai/founder-onboarding?source=github_plugin_marketplace).
