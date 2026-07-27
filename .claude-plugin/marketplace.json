@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "terminalbox-tools",
+  "description": "Trust-first workflow checks for deciding how to run Claude Code.",
+  "owner": {
+    "name": "Terminalbox",
+    "email": "hello@terminalbox.ai"
+  },
+  "plugins": [
+    {
+      "name": "remote-workspace-fit",
+      "source": "./plugins/remote-workspace-fit",
+      "description": "Read-only repository audit for choosing between a rebuildable Claude Code web session and a persistent workspace.",
+      "category": "development",
+      "tags": ["remote-development", "repository-audit", "workflow"]
+    }
+  ]
+}
