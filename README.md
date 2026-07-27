@@ -80,3 +80,7 @@ or [Anthropic's marketplace documentation](https://code.claude.com/docs/en/plugi
 If the audit finds that live processes or interactive state genuinely need to persist, compare the
 [€6/month plan](https://terminalbox.ai/pricing?source=github_plugin_marketplace) or ask for an
 [honest founder fit check](https://terminalbox.ai/founder-onboarding?source=github_plugin_marketplace).
+
+## License
+
+MIT. See [`LICENSE`](./LICENSE).
