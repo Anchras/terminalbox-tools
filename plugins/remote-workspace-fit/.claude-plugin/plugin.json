@@ -2,13 +2,13 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "remote-workspace-fit",
   "displayName": "Remote Workspace Fit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Read-only repository audit for choosing between Claude Code web and a persistent development workspace.",
   "author": {
     "name": "Terminalbox",
     "email": "hello@terminalbox.ai"
   },
-  "homepage": "https://terminalbox.ai/claude-code-workspace-fit-plugin",
+  "homepage": "https://terminalbox.ai/claude-code-workspace-fit-plugin?source=github_plugin_marketplace",
   "repository": "https://github.com/Anchras/terminalbox-tools/tree/main/plugins/remote-workspace-fit",
   "keywords": [
     "claude-code",
