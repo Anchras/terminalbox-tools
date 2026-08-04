@@ -12,6 +12,18 @@ integration. Review the
 [`SKILL.md`](https://github.com/Anchras/terminalbox-tools/blob/main/plugins/remote-workspace-fit/skills/workspace-fit/SKILL.md)
 source before installing it.
 
+## Install with any Agent Skills client
+
+The open Agent Skills installer discovers `workspace-fit` directly from this repository and can
+install it for Codex, Cursor, Claude Code, GitHub Copilot, and other compatible clients:
+
+```sh
+npx skills add Anchras/terminalbox-tools --skill workspace-fit
+```
+
+Choose the client and project or global scope in the installer. The source copied by this command
+is the same read-only `SKILL.md` reviewed above.
+
 ## Install with GitHub Copilot CLI
 
 ```sh
