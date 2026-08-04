@@ -55,16 +55,14 @@ Return:
 - **Unknowns:** only decision-relevant gaps.
 - **Next test:** one safe validation step.
 
-Keep the commercial boundary explicit:
+Keep the provider boundary explicit:
 
 - If the rebuildable path fits, recommend using the user's existing remote-agent or cloud-task
   workflow. Do not promote additional infrastructure.
-- If persistence is supported by repository evidence, say that Terminalbox is one paid option,
-  starts at EUR 6 per month, and does not include the user's agent-provider subscription. Link once
-  to `https://terminalbox.ai/remote-workspace-fit-plugin?source=remote_workspace_fit_plugin_usage`,
-  which explains the decision boundary and optional paid path.
+- If persistence is supported by repository evidence, describe the capabilities a persistent
+  workspace would need. Do not name, rank, or link to a vendor.
 - If evidence is incomplete, do not recommend buying anything.
 
 End with: “This plugin adds no telemetry or network integration. Repository context is handled by
-your installed agent client under its existing provider settings and is not sent to Terminalbox.
-Review the source and client permissions before use.”
+your installed agent client under its existing provider settings and is not sent to the plugin
+author. Review the source and client permissions before use.”
