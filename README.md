@@ -1,9 +1,9 @@
-# Remote Workspace Fit for Claude Code
+# Remote Workspace Fit for Copilot and Claude Code
 
-A free, read-only Claude Code skill that audits repository evidence before recommending one of
+A free, read-only agent skill that audits repository evidence before recommending one of
 three remote-development paths:
 
-- use a rebuildable Claude Code web session;
+- use a rebuildable remote-agent task;
 - use a persistent development workspace when live processes or interactive state justify it; or
 - gather more evidence before choosing infrastructure.
 
@@ -12,7 +12,15 @@ integration. Review the
 [`SKILL.md`](https://github.com/Anchras/terminalbox-tools/blob/main/plugins/remote-workspace-fit/skills/workspace-fit/SKILL.md)
 source before installing it.
 
-## Install
+## Install with GitHub Copilot CLI
+
+```sh
+copilot plugin install Anchras/terminalbox-tools:plugins/remote-workspace-fit
+```
+
+Start Copilot in a repository and ask it to use the `workspace-fit` skill for a read-only audit.
+
+## Install with Claude Code
 
 ```sh
 claude plugin marketplace add Anchras/terminalbox-tools
@@ -25,9 +33,9 @@ Then run this inside a repository:
 /remote-workspace-fit:workspace-fit
 ```
 
-Claude Code copies the plugin into its local plugin cache. The audit reads only the repository
-evidence allowed by the skill. Repository context stays within Claude Code under the user's
-existing provider settings and is not sent to Terminalbox.
+The client copies the plugin into its local plugin cache. The audit reads only the repository
+evidence allowed by the skill. Repository context stays within GitHub Copilot or Claude Code under
+the user's existing provider settings and is not sent to Terminalbox.
 
 ## What the audit uses
 
@@ -70,16 +78,14 @@ must follow the evidence found in the repository being audited.
 
 ## Commercial boundary
 
-The skill recommends the existing provider workflow when a clean clone can reconstruct the useful
-state. It names Terminalbox as one paid option only when repository evidence supports a need for
-persistent live state, and it makes no purchase recommendation when the evidence is incomplete.
+The skill recommends the existing remote-agent workflow when a clean clone can reconstruct the
+useful state. It names Terminalbox as one paid option only when repository evidence supports a need
+for persistent live state, and it makes no purchase recommendation when the evidence is incomplete.
 
 See the
-[source walkthrough and decision boundary](https://terminalbox.ai/claude-code-workspace-fit-plugin?source=github_plugin_marketplace)
-or [Anthropic's marketplace documentation](https://code.claude.com/docs/en/plugin-marketplaces).
-If the audit finds that live processes or interactive state genuinely need to persist, compare the
-[€6/month plan](https://terminalbox.ai/pricing?source=github_plugin_marketplace) or ask for an
-[honest founder fit check](https://terminalbox.ai/founder-onboarding?source=github_plugin_marketplace).
+[source walkthrough and decision boundary](https://terminalbox.ai/remote-workspace-fit-plugin?source=agent_plugin_marketplace).
+If the audit finds that live processes or interactive state genuinely need to persist, that page
+also explains the optional paid path and its provider boundary.
 
 ## License
 
