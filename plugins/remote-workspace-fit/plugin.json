@@ -1,15 +1,13 @@
 {
-  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "remote-workspace-fit",
-  "displayName": "Remote Workspace Fit",
-  "version": "0.2.0",
   "description": "Read-only repository audit for choosing between a rebuildable remote-agent task and a persistent development workspace.",
+  "version": "0.2.0",
   "author": {
     "name": "Terminalbox",
     "email": "hello@terminalbox.ai"
   },
   "homepage": "https://github.com/Anchras/terminalbox-tools/tree/main/plugins/remote-workspace-fit",
-  "repository": "https://github.com/Anchras/terminalbox-tools/tree/main/plugins/remote-workspace-fit",
+  "repository": "https://github.com/Anchras/terminalbox-tools",
   "license": "MIT",
   "keywords": [
     "github-copilot",
@@ -18,5 +16,6 @@
     "remote-development",
     "repository-audit",
     "persistent-workspace"
-  ]
+  ],
+  "skills": ["skills/"]
 }
