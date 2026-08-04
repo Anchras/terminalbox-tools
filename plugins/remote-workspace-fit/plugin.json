@@ -1,7 +1,7 @@
 {
   "name": "remote-workspace-fit",
   "description": "Read-only repository audit for choosing between a rebuildable remote-agent task and a persistent development workspace.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": {
     "name": "Terminalbox",
     "email": "hello@terminalbox.ai"

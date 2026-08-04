@@ -7,7 +7,7 @@ three remote-development paths:
 - use a persistent development workspace when live processes or interactive state justify it; or
 - gather more evidence before choosing infrastructure.
 
-The skill has no scripts, hooks, MCP servers, telemetry, network calls, or Terminalbox service
+The skill has no scripts, hooks, MCP servers, telemetry, network calls, or required service
 integration. Review the
 [`SKILL.md`](https://github.com/Anchras/terminalbox-tools/blob/main/plugins/remote-workspace-fit/skills/workspace-fit/SKILL.md)
 source before installing it.
@@ -35,7 +35,7 @@ Then run this inside a repository:
 
 The client copies the plugin into its local plugin cache. The audit reads only the repository
 evidence allowed by the skill. Repository context stays within GitHub Copilot or Claude Code under
-the user's existing provider settings and is not sent to Terminalbox.
+the user's existing provider settings and is not sent to the plugin author.
 
 ## What the audit uses
 
@@ -76,13 +76,9 @@ Next test:
 This example is an output shape, not a claim about a particular repository. The recommendation
 must follow the evidence found in the repository being audited.
 
-## Commercial boundary
+## Provider independence
 
 The skill recommends the existing remote-agent workflow when a clean clone can reconstruct the
-useful state. It names Terminalbox as one paid option only when repository evidence supports a need
-for persistent live state, and it makes no purchase recommendation when the evidence is incomplete.
-
-See the
-[source walkthrough and decision boundary](https://terminalbox.ai/remote-workspace-fit-plugin?source=agent_plugin_marketplace).
-If the audit finds that live processes or interactive state genuinely need to persist, that page
-also explains the optional paid path and its provider boundary.
+useful state. When repository evidence supports persistent live state, it describes the required
+capabilities without naming a vendor. It makes no purchase recommendation when the evidence is
+incomplete. The audit does not require Terminalbox or any service supplied by the plugin author.
