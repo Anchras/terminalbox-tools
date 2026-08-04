@@ -24,6 +24,9 @@ npx skills add Anchras/terminalbox-tools --skill workspace-fit
 Choose the client and project or global scope in the installer. The source copied by this command
 is the same read-only `SKILL.md` reviewed above.
 
+[Review the indexed skill, install count, and security scans on
+skills.sh.](https://www.skills.sh/anchras/terminalbox-tools/workspace-fit)
+
 ## Install with GitHub Copilot CLI
 
 ```sh
