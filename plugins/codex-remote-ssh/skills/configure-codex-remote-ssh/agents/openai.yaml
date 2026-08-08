@@ -1,0 +1,4 @@
+interface:
+  display_name: "Configure Codex Remote SSH"
+  short_description: "Connect Codex to a persistent Terminalbox pane"
+  default_prompt: "Use $configure-codex-remote-ssh to connect my Codex app to a Terminalbox pane over SSH."

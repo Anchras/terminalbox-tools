@@ -1,0 +1,19 @@
+{
+  "name": "codex-remote-ssh",
+  "version": "0.1.0",
+  "description": "Safely configure and verify a Terminalbox SSH host for the official Codex app.",
+  "author": {
+    "name": "Terminalbox",
+    "email": "hello@terminalbox.ai"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Codex Remote SSH",
+    "shortDescription": "Connect Codex to a persistent Terminalbox pane.",
+    "longDescription": "Verify the Terminalbox SSH gateway, create a bounded host entry, test the remote Codex login shell, and connect it in the official Codex app.",
+    "developerName": "Terminalbox",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": "Use $configure-codex-remote-ssh to connect my Codex app to a Terminalbox pane over SSH."
+  }
+}

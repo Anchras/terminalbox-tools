@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "terminalbox-tools",
-  "description": "Trust-first workflow checks for choosing remote-agent infrastructure.",
+  "description": "Trust-first tools for persistent remote-agent workflows.",
   "owner": {
     "name": "Terminalbox",
     "email": "hello@terminalbox.ai"
@@ -12,7 +12,24 @@
       "source": "./plugins/remote-workspace-fit",
       "description": "Read-only repository audit for choosing between a rebuildable remote-agent task and a persistent workspace.",
       "category": "development",
-      "tags": ["github-copilot", "claude-code", "remote-development", "repository-audit"]
+      "tags": [
+        "github-copilot",
+        "claude-code",
+        "remote-development",
+        "repository-audit"
+      ]
+    },
+    {
+      "name": "codex-remote-ssh",
+      "source": "./plugins/codex-remote-ssh",
+      "description": "Safely configure and verify a Terminalbox SSH host for the official Codex app.",
+      "category": "development",
+      "tags": [
+        "codex",
+        "remote-ssh",
+        "remote-development",
+        "persistent-workspace"
+      ]
     }
   ]
 }
