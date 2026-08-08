@@ -12,7 +12,14 @@ shell, and hands the verified alias off to Codex Settings → Connections.
 The skill never reads, copies, or uploads a private key. It does not create a Terminalbox account,
 start a paid subscription, or change SSH configuration without the user's explicit approval.
 
-Install it with any compatible Agent Skills client:
+Install it as a native Codex plugin:
+
+```sh
+codex plugin marketplace add Anchras/terminalbox-tools
+codex plugin add codex-remote-ssh@terminalbox-tools
+```
+
+Or install the standalone skill with any compatible Agent Skills client:
 
 ```sh
 npx skills add Anchras/terminalbox-tools --skill configure-codex-remote-ssh
@@ -45,7 +52,7 @@ npx skills add Anchras/terminalbox-tools --skill workspace-fit
 [Review the indexed skill, install count, and security scans on
 skills.sh.](https://www.skills.sh/anchras/terminalbox-tools/workspace-fit)
 
-## Client-native plugin installs
+## Other client-native plugin installs
 
 GitHub Copilot CLI:
 

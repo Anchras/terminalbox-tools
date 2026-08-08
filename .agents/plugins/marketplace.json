@@ -1,0 +1,20 @@
+{
+  "name": "terminalbox-tools",
+  "interface": {
+    "displayName": "Terminalbox Tools"
+  },
+  "plugins": [
+    {
+      "name": "codex-remote-ssh",
+      "source": {
+        "source": "local",
+        "path": "./plugins/codex-remote-ssh"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

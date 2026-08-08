@@ -1,19 +1,40 @@
 {
   "name": "codex-remote-ssh",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Safely configure and verify a Terminalbox SSH host for the official Codex app.",
   "author": {
     "name": "Terminalbox",
-    "email": "hello@terminalbox.ai"
+    "email": "hello@terminalbox.ai",
+    "url": "https://terminalbox.ai"
   },
+  "homepage": "https://terminalbox.ai/codex-hosting?source=codex_plugin_directory",
+  "repository": "https://github.com/Anchras/terminalbox-tools",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "remote-ssh",
+    "remote-development",
+    "persistent-workspace",
+    "terminalbox"
+  ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Codex Remote SSH",
-    "shortDescription": "Connect Codex to a persistent Terminalbox pane.",
-    "longDescription": "Verify the Terminalbox SSH gateway, create a bounded host entry, test the remote Codex login shell, and connect it in the official Codex app.",
+    "shortDescription": "Connect Codex to Terminalbox",
+    "longDescription": "Connect the official Codex app to a persistent Terminalbox SSH workspace. The guided workflow verifies the published host key, prepares a minimal OpenSSH alias, checks that Codex is available in the remote login shell, and hands the verified host to Settings → Connections. Terminalbox hosting starts at €6/month; OpenAI access is separate. The plugin never reads or uploads private keys and makes no change without explicit approval.",
     "developerName": "Terminalbox",
-    "category": "Productivity",
-    "capabilities": [],
-    "defaultPrompt": "Use $configure-codex-remote-ssh to connect my Codex app to a Terminalbox pane over SSH."
+    "category": "Developer Tools",
+    "capabilities": [
+      "Configure OpenSSH",
+      "Verify remote Codex"
+    ],
+    "websiteURL": "https://terminalbox.ai/codex-hosting?source=codex_plugin_directory",
+    "privacyPolicyURL": "https://terminalbox.ai/privacy",
+    "termsOfServiceURL": "https://terminalbox.ai/terms",
+    "defaultPrompt": [
+      "Connect my Codex app to Terminalbox over SSH",
+      "Check why Codex cannot find my Terminalbox SSH host",
+      "Verify my Terminalbox SSH setup without reading private keys"
+    ]
   }
 }

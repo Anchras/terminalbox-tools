@@ -4,7 +4,14 @@ This plugin contains one inspectable skill that configures a paid Terminalbox pa
 SSH host for the official Codex app. It verifies the published gateway fingerprint, preserves
 existing SSH configuration, tests the remote login shell, and stops on a host-key mismatch.
 
-Install the skill with any compatible Agent Skills client:
+Install the native Codex plugin:
+
+```sh
+codex plugin marketplace add Anchras/terminalbox-tools
+codex plugin add codex-remote-ssh@terminalbox-tools
+```
+
+Or install the standalone skill with any compatible Agent Skills client:
 
 ```sh
 npx skills add Anchras/terminalbox-tools --skill configure-codex-remote-ssh
