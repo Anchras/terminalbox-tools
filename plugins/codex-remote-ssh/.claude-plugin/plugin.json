@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "codex-remote-ssh",
+  "displayName": "Codex Remote SSH",
+  "version": "0.1.0",
+  "description": "Safely configure and verify a Terminalbox SSH host for the official Codex app.",
+  "author": {
+    "name": "Terminalbox",
+    "email": "hello@terminalbox.ai"
+  },
+  "homepage": "https://terminalbox.ai/codex-hosting",
+  "repository": "https://github.com/Anchras/terminalbox-tools/tree/main/plugins/codex-remote-ssh",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "remote-ssh",
+    "remote-development",
+    "persistent-workspace"
+  ]
+}

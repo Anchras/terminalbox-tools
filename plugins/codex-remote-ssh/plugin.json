@@ -1,0 +1,20 @@
+{
+  "name": "codex-remote-ssh",
+  "description": "Safely configure and verify a Terminalbox SSH host for the official Codex app.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Terminalbox",
+    "email": "hello@terminalbox.ai"
+  },
+  "homepage": "https://terminalbox.ai/codex-hosting",
+  "repository": "https://github.com/Anchras/terminalbox-tools",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "remote-ssh",
+    "remote-development",
+    "persistent-workspace",
+    "terminalbox"
+  ],
+  "skills": ["skills/"]
+}

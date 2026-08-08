@@ -1,102 +1,72 @@
-# Remote Workspace Fit for Copilot and Claude Code
+# Terminalbox tools for remote agent work
 
-A free, read-only agent skill that audits repository evidence before recommending one of
-three remote-development paths:
+Open, inspectable agent skills for deciding when persistent development infrastructure is useful
+and connecting the official Codex app to it safely.
+
+## Configure Codex Remote SSH
+
+`configure-codex-remote-ssh` prepares one concrete SSH host entry for a paid Terminalbox pane,
+verifies the published gateway fingerprint, tests that Codex is available through the remote login
+shell, and hands the verified alias off to Codex Settings → Connections.
+
+The skill never reads, copies, or uploads a private key. It does not create a Terminalbox account,
+start a paid subscription, or change SSH configuration without the user's explicit approval.
+
+Install it with any compatible Agent Skills client:
+
+```sh
+npx skills add Anchras/terminalbox-tools --skill configure-codex-remote-ssh
+```
+
+Review the
+[`SKILL.md`](https://github.com/Anchras/terminalbox-tools/blob/main/plugins/codex-remote-ssh/skills/configure-codex-remote-ssh/SKILL.md)
+before installing. Terminalbox hosting starts at €6/month; OpenAI access is separate.
+
+[See setup details](https://terminalbox.ai/codex-hosting), or
+[start Base for €6/month](https://terminalbox.ai/pricing?source=codex_remote_ssh_skill).
+
+## Remote Workspace Fit
+
+`workspace-fit` is a free, read-only repository audit. It recommends exactly one of three paths:
 
 - use a rebuildable remote-agent task;
 - use a persistent development workspace when live processes or interactive state justify it; or
 - gather more evidence before choosing infrastructure.
 
-The skill has no scripts, hooks, MCP servers, telemetry, network calls, or required service
-integration. Review the
-[`SKILL.md`](https://github.com/Anchras/terminalbox-tools/blob/main/plugins/remote-workspace-fit/skills/workspace-fit/SKILL.md)
-source before installing it.
+The audit remains provider-neutral. It has no scripts, hooks, MCP servers, telemetry, network
+calls, or required service integration.
 
-## Install with any Agent Skills client
-
-The open Agent Skills installer discovers `workspace-fit` directly from this repository and can
-install it for Codex, Cursor, Claude Code, GitHub Copilot, and other compatible clients:
+Install it with any compatible Agent Skills client:
 
 ```sh
 npx skills add Anchras/terminalbox-tools --skill workspace-fit
 ```
 
-Choose the client and project or global scope in the installer. The source copied by this command
-is the same read-only `SKILL.md` reviewed above.
-
 [Review the indexed skill, install count, and security scans on
 skills.sh.](https://www.skills.sh/anchras/terminalbox-tools/workspace-fit)
 
-## Install with GitHub Copilot CLI
+## Client-native plugin installs
+
+GitHub Copilot CLI:
 
 ```sh
+copilot plugin install Anchras/terminalbox-tools:plugins/codex-remote-ssh
 copilot plugin install Anchras/terminalbox-tools:plugins/remote-workspace-fit
 ```
 
-Start Copilot in a repository and ask it to use the `workspace-fit` skill for a read-only audit.
-
-## Install with Claude Code
+Claude Code:
 
 ```sh
 claude plugin marketplace add Anchras/terminalbox-tools
+claude plugin install codex-remote-ssh@terminalbox-tools
 claude plugin install remote-workspace-fit@terminalbox-tools
 ```
 
-Then run this inside a repository:
+## Trust boundary
 
-```text
-/remote-workspace-fit:workspace-fit
-```
-
-The client copies the plugin into its local plugin cache. The audit reads only the repository
-evidence allowed by the skill. Repository context stays within GitHub Copilot or Claude Code under
-the user's existing provider settings and is not sent to the plugin author.
-
-## What the audit uses
-
-The skill checks tracked orientation docs, manifests, lockfiles, development scripts, container
-configuration, and CI workflows. It looks for two different kinds of evidence:
-
-- whether a clean clone has enough instructions to reconstruct the useful environment; and
-- whether useful state lives outside Git as a running process, local service or data set,
-  interactive shell, or continuously steered session.
-
-It returns one recommendation, three to six file-backed observations, the rebuild plan,
-persistence triggers, decision-relevant unknowns, and one safe next test.
-
-## Illustrative result
-
-```text
-Recommendation: Persistent workspace — the documented workflow depends on a live local database
-and a continuously running worker that a fresh repository task would need to recreate.
-
-Repository evidence:
-- compose.yaml defines the development database and queue
-- scripts/dev starts the web process and background worker together
-- CLAUDE.md documents cross-device handoff to the same tmux session
-
-Rebuild plan:
-- clone the repository, restore locked dependencies, and start the documented service stack
-
-Persistence triggers:
-- database contents, worker state, and the interactive tmux session
-
-Unknowns:
-- whether the database can be replaced with disposable fixtures for this task
-
-Next test:
-- confirm a fresh environment can complete one representative task without the existing services
-```
-
-This example is an output shape, not a claim about a particular repository. The recommendation
-must follow the evidence found in the repository being audited.
-
-## Provider independence
-
-The skill recommends the existing remote-agent workflow when a clean clone can reconstruct the
-useful state. When repository evidence supports persistent live state, it describes the required
-capabilities without naming a vendor. It makes no purchase recommendation when the evidence is
-incomplete. The audit does not require Terminalbox or any service supplied by the plugin author.
+All skill instructions are plain text in this repository. Review the source and your agent
+client's permissions before use. Repository and SSH configuration context is handled by the
+installed client under its existing provider settings and is not sent to the plugin author.
 
 ## License
 
